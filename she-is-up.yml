@@ -1,0 +1,11 @@
+ cat she-is-up.yml
+---
+- name: Connecting to Leaf
+  hosts: switch
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Reconfigure Interfaces
+      debug:
+        msg: 'Everything is gooooooood'
