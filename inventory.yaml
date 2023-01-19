@@ -1,0 +1,8 @@
+all:
+  children:
+    switch:
+      hosts:
+        arista01: {}
+    ungrouped:
+      hosts:
+        localhost: {}
