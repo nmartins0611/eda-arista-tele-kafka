@@ -1,0 +1,22 @@
+---
+- name: Connecting to Leaf
+  hosts: switch
+  connection: local
+  gather_facts: false
+
+  vars:
+   ansible_connection: 
+   ansible_network_os: 
+   ansible_user: 
+   ansible_password: 
+   ansible_become:
+   ansible_become_method: 
+
+
+  tasks:
+
+    - name: Correct Interfaces
+      arista.eos.eos_interfaces:
+        config:
+         - name: Ethernet1
+           enabled: true
